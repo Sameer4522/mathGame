@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #f4c531;
+}
+
+.container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 31.25em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    padding: 5em 3em;
+    border-radius: 0.5em;
+}
+
+.container h3 {
+    font-size: 1.2em;
+    color: #23234c;
+    text-align: center;
+    font-weight: 800;
+    line-height: 1.8em;
+}
+
+.container #submit-btn {
+    font-size: 1.2em;
+    font-weight: 800;
+    display: block;
+    margin: 0 auto;
+    background-color: #f4c531;
+    border-radius: 0.3em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #23234c;
+    padding: 0.6em 2em;
+}
+
+#error-msg {
+    text-align: center;
+    margin-top: 1em;
+    background-color: #ffeed0;
+    color: #d62f2f;
+    padding: 0.2em 0;
+}
+
+.hide {
+    display: none;
+}
