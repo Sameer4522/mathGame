@@ -22,4 +22,14 @@ const questionGenerator = () => {
   if (randomOperator == "-" && num2 > num1) {
     [num1, num2] = [num2, num1];
   }
+
+  // Solution
+  let solution = eval(`${num1}${randomOperator}${num2}`);
+  console.log(num1, randomOperator, num2, solution);
 };
+
+// Start the Game
+
+startBtn.addEventListener("click", () => {
+  questionGenerator();
+});
