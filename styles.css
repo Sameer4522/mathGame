@@ -93,6 +93,39 @@ body {
     margin: 0;
 }
 
+.controls-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4c531;
+    height: 100%;
+    width: 100%;
+    top: 0;
+}
+
+#start-btn {
+    font-size: 1.2em;
+    font-weight: 800;
+    background-color: #fff;
+    color: #23234c;
+    border: none;
+    outline: none;
+    padding: 0.8em 1.8em;
+    border-radius: 0.3em;
+}
+
+#result {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #23234c;
+}
+
+#result span {
+    font-weight: 900;
+}
+
 .hide {
     display: none;
 }

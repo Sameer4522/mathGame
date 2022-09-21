@@ -46,6 +46,16 @@ const questionGenerator = () => {
     question.innerHTML = `${num1} ${randomOperator} ${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
   }
 
+  // Pressing Enter button as Submit in input field
+  let enterBtn = document.getElementById("inputValue");
+
+  enterBtn.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      document.getElementById("submit-btn").click();
+    }
+  });
+
   // User input Check
   submitBtn.addEventListener("click", () => {
     errorMessage.classList.add("hide");
@@ -67,6 +77,7 @@ const questionGenerator = () => {
         stopGame(`Opps!! <span>Wrong</span> Answer`);
       }
     }
+
     //if user input is empty
     else {
       errorMessage.classList.remove("hide");
@@ -82,6 +93,9 @@ startBtn.addEventListener("click", () => {
   answerValue = "";
   errorMessage.innerHTML = "";
   errorMessage.classList.add("hide");
+  //Controls and buttons visibility
+  controls.classList.add("hide");
+  startBtn.classList.add("hide");
   questionGenerator();
 });
 
@@ -89,7 +103,7 @@ startBtn.addEventListener("click", () => {
 
 const stopGame = (resultText) => {
   result.innerHTML = resultText;
-  startBtn.innerHTML = "Restart";
-  //   controls.classList.remove("hide");
-  //   startBtn.classList.add("hide");
+  startBtn.innerText = "Restart";
+  controls.classList.remove("hide");
+  startBtn.classList.remove("hide");
 };
