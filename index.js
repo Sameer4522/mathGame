@@ -26,6 +26,26 @@ const questionGenerator = () => {
   // Solution
   let solution = eval(`${num1}${randomOperator}${num2}`);
   console.log(num1, randomOperator, num2, solution);
+
+  //For placing the input at random position
+  //(1 for num1, 2 for num2, 3 for operator, anything else(4) for solution)
+
+  let randomVar = randomValue(1, 5);
+
+  if (randomValue == 1) {
+    answerValue = num1;
+    question.innerHTML = `<input type="number" id="inputValue" placeholder="?"\>${randomOperator}${num2} =${solution}`;
+  } else if (randomValue == 2) {
+    answerValue = num2;
+    question.innerHTML = `${num1}${randomOperator}<input type="number" id="inputValue" placeholder="?"\> =${solution}`;
+  } else if (randomValue == 3) {
+    answerValue = randomOperator;
+    operatorQuestion == true;
+    question.innerHTML = `${num1}<input type="number" id="inputValue" placeholder="?"\>${num2} =${solution}`;
+  } else {
+    answerValue = solution;
+    question.innerHTML = `${num1}${randomOperator}${num2} = <input type="number" id="inputValue" placeholder="?"\>`;
+  }
 };
 
 // Start the Game
