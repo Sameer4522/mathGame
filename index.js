@@ -32,13 +32,13 @@ const questionGenerator = () => {
 
   let randomVar = randomValue(1, 5);
 
-  if (randomValue == 1) {
+  if (randomVar == 1) {
     answerValue = num1;
     question.innerHTML = `<input type="number" id="inputValue" placeholder="?"\>${randomOperator}${num2} =${solution}`;
-  } else if (randomValue == 2) {
+  } else if (randomVar == 2) {
     answerValue = num2;
     question.innerHTML = `${num1}${randomOperator}<input type="number" id="inputValue" placeholder="?"\> =${solution}`;
-  } else if (randomValue == 3) {
+  } else if (randomVar == 3) {
     answerValue = randomOperator;
     operatorQuestion == true;
     question.innerHTML = `${num1}<input type="number" id="inputValue" placeholder="?"\>${num2} =${solution}`;

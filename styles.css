@@ -51,6 +51,48 @@ body {
     padding: 0.2em 0;
 }
 
+.container #question {
+    background-color: #eeedf1;
+    font-size: 2em;
+    font-weight: 900;
+    color: #23234c;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.4em 0 1em 0;
+    padding: 1em 0;
+}
+
+.container input {
+    font-size: 1em;
+    font-weight: 900;
+    width: 2.3em;
+    color: #23234c;
+    text-align: center;
+    padding: 0 0.2em;
+    border: none;
+    background-color: transparent;
+    border-bottom: 0.12em solid #23234c;
+    margin: 0 0.25em;
+}
+
+.container input:focus {
+    border-color: #f4c531;
+    outline: none;
+}
+
+/* Hide Arrow from input box */
+.container input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.container input[type="number"]::-webkit-outer-spin-button,
+.container input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .hide {
     display: none;
 }
